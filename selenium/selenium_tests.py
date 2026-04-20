@@ -97,7 +97,7 @@ try:
 except Exception as e:
     log("Empty input does not add task", False, str(e))
 
-# Test 8: Page title/header visible
+# Test 8: Page title/header visible ....... *****
 try:
     body = driver.find_element(By.TAG_NAME, "body").text
     assert any(word in body for word in ["To-Do", "Todo", "Task", "TODO"])
