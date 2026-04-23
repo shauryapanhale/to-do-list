@@ -35,7 +35,7 @@ try:
 except:
     log("Page loads successfully", False, "Page did not load")
 
-# Test 2: Input field exists
+# Test 2: Input field exists ..........
 try:
     input_box = driver.find_element(By.CSS_SELECTOR, "input[type='text'], input[placeholder]")
     log("Task input field is visible", True)
@@ -56,7 +56,7 @@ try:
 except Exception as e:
     log("Add a new task", False, str(e))
 
-# Test 4: Task appears in list
+# Test 4: Task appears in list ...........
 try:
     body = driver.find_element(By.TAG_NAME, "body").text
     assert "Selenium Test Task" in body
@@ -97,7 +97,7 @@ try:
 except Exception as e:
     log("Empty input does not add task", False, str(e))
 
-# Test 8: Page title/header visible
+# Test 8: Page title/header visible ....... *****
 try:
     body = driver.find_element(By.TAG_NAME, "body").text
     assert any(word in body for word in ["To-Do", "Todo", "Task", "TODO"])
